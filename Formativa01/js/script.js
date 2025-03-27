@@ -1,4 +1,5 @@
 //                      ATIVIDADE 01
+
 const exercicio1 = () => {
   let resposta = document.getElementById("resposta");
   let resultado = "";
@@ -7,7 +8,9 @@ const exercicio1 = () => {
   }
   resposta.innerHTML = resultado;
 };
+
 //                      ATIVIDADE 02
+
 const exercicio2 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -22,7 +25,9 @@ const exercicio2 = () => {
     erro.innerHTML = "";
   }
 };
+
 //                      ATIVIDADE 03
+
 const exercicio3 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -46,7 +51,9 @@ const exercicio3 = () => {
     }
   }
 };
+
 //                      ATIVIDADE 04
+
 const exercicio4 = () => {
   let tabuada = "";
   let resultado = document.getElementById("resultado");
@@ -63,7 +70,9 @@ const exercicio4 = () => {
     erro.innerHTML = "";
   }
 };
+
 //                      ATIVIDADE 05
+
 const exercicio5 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -82,7 +91,9 @@ const exercicio5 = () => {
     erro.innerHTML = "";
   }
 };
+
 //                      ATIVIDADE 06
+
 const exercicio6 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -104,7 +115,9 @@ const exercicio6 = () => {
     erro.innerHTML = "";
   }
 };
+
 //                      ATIVIDADE 07
+
 const exercicio7 = () => {
   let resposta = document.getElementById("resposta");
   let i = 10;
@@ -113,7 +126,9 @@ const exercicio7 = () => {
     i--;
   }
 };
+
 //                      ATIVIDADE 08
+
 const exercicio8 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -132,7 +147,9 @@ const exercicio8 = () => {
   erro.innerHTML = " ";
 };
 
+
 //                      ATIVIDADE 09
+
 const exercicio9 = () => {
   let resposta = document.getElementById("resposta");
   let soma = 0;
@@ -141,7 +158,9 @@ const exercicio9 = () => {
   }
   resposta.innerHTML = "A soma dos números de 1 a 100 é " + soma;
 };
+
 //                      ATIVIDADE 10
+
 let contador = 0;
 let soma = 0;
 const exercicio10 = () => {
@@ -157,6 +176,7 @@ const exercicio10 = () => {
 };
 
 //                      ATIVIDADE 11
+
 const exercicio11 = () => {
   let resposta = document.getElementById("resposta");
   for (let i = 1; i <= 100; i++) {
@@ -165,7 +185,9 @@ const exercicio11 = () => {
     }
   }
 };
+
 //                      ATIVIDADE 12
+
 const exercicio12 = () => {
   let resultado = document.getElementById("resultado");
   let erro = document.getElementById("erro");
@@ -183,7 +205,9 @@ const exercicio12 = () => {
     erro.innerHTML = "";
   }
 };
+
 //                      ATIVIDADE 13
+
 const exercicio13 = () => {
   let resposta = document.getElementById("resposta");
   let erro = document.getElementById("erro");
@@ -343,12 +367,18 @@ const exercicio22 = () => {
   let erro = document.getElementById("erro");
   let numero = 0;
   let soma = 0;
+  erro.innerHTML = ""; 
+
   while (soma < 100) {
-    numero = parseInt(prompt("Digite um número"));
-    soma += numero;
+    numero = prompt("Digite um número");
+    if (isNaN(numero) || numero === "") {
+      erro.innerHTML = "Por favor, digite um número válido!";
+    } else {
+      soma += parseInt(numero);
+    }
   }
+
   resposta.innerHTML = "A soma dos números digitados é " + soma;
-  erro.innerHTML = "";
 };
 //                      ATIVIDADE 23
 const exercicio23 = () => {
